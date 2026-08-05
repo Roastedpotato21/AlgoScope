@@ -143,6 +143,22 @@
       color 240ms ease;
   }
 
+  body.custom-cursor-enabled {
+    cursor: none;
+  }
+
+  body.custom-cursor-enabled * {
+    cursor: none !important;
+  }
+
+  body.custom-cursor-enabled input,
+  body.custom-cursor-enabled textarea,
+  body.custom-cursor-enabled select,
+  body.custom-cursor-enabled button,
+  body.custom-cursor-enabled a {
+    cursor: none !important;
+  }
+
   .logo-font {
     font-family: 'Geist', sans-serif;
   }

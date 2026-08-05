@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navbar } from './Navbar'
+import CustomCursor from './CustomCursor'
 import Footer from './Footer'
 import { motion } from 'framer-motion'
 import SeoHead from './SeoHead'
@@ -26,6 +27,7 @@ export default function AppLayout({
       transition={{ duration: 0.5 }}
     >
       <SeoHead />
+      <CustomCursor />
 
       {showBackground && <Background />}
 

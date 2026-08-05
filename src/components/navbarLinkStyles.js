@@ -6,15 +6,15 @@ export const getNavLinkClasses = ({ isActive = false, isDark = false } = {}) => 
   ]
 
   if (isActive) {
-    base.push('bg-indigo-500/10 text-indigo-600 shadow-[0_10px_30px_rgba(99,102,241,0.12)]')
-    base.push('before:scale-x-100 before:bg-indigo-500')
+    base.push('bg-indigo-500/10 text-indigo-600 shadow-[0_18px_40px_rgba(99,102,241,0.12)]')
+    base.push('before:scale-x-100 before:bg-indigo-500 before:transition-transform before:duration-500')
     if (isDark) {
-      base.push('dark:bg-indigo-500/15 dark:text-indigo-300')
+      base.push('dark:bg-indigo-500/15 dark:text-indigo-300 dark:shadow-[0_18px_40px_rgba(99,102,241,0.18)]')
     }
     return base.join(' ')
   }
 
-  base.push('text-slate-600 hover:text-slate-900 hover:bg-white/70')
+  base.push('text-slate-600 hover:text-slate-900 hover:bg-white/80')
   base.push('before:bg-slate-400')
   if (isDark) {
     base.push('dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-900/70')

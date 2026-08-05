@@ -219,33 +219,38 @@ export const Navbar = () => {
 
   return (
     <header className="sticky top-3 z-50 mx-auto mb-6 w-full max-w-7xl px-3 py-2 sm:px-4 lg:px-6">
-      <div className="theme-navbar rounded-[28px] border border-slate-200/80 bg-white/75 px-3.5 py-3 shadow-[0_20px_70px_-24px_rgba(15,23,42,0.28)] backdrop-blur-2xl transition-all duration-300 dark:border-slate-800/80 dark:bg-slate-950/75 dark:shadow-[0_20px_70px_-24px_rgba(2,6,23,0.55)]">
+      <div className="theme-navbar relative rounded-[32px] border border-white/10 bg-white/35 px-4 py-4 shadow-[0_24px_80px_rgba(15,23,42,0.14)] backdrop-blur-2xl transition-all duration-300 dark:border-slate-800/60 dark:bg-slate-950/80 dark:shadow-[0_28px_90px_rgba(0,0,0,0.28)]">
         <div className="relative flex min-h-14 items-center justify-between gap-3">
           <Link
             to="/"
             data-tour="logo-brand"
             className="group flex min-w-0 flex-row items-center gap-3 text-xl font-semibold tracking-tight"
           >
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200/70 bg-gradient-to-br from-indigo-500/15 via-white to-cyan-400/20 shadow-sm transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:shadow-md dark:border-slate-800/70 dark:from-indigo-500/20 dark:via-slate-900/70 dark:to-cyan-400/10">
+            <div className="flex h-12 w-12 items-center justify-center rounded-3xl border border-slate-200/70 bg-gradient-to-br from-indigo-500/15 via-white to-cyan-400/20 shadow-sm transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:shadow-md dark:border-slate-800/70 dark:from-indigo-500/20 dark:via-slate-900/70 dark:to-cyan-400/10">
               <img src={logo} alt="AlgoScope Logo" className="h-8 w-8" />
             </div>
 
-            <span className="text-[1.3rem] font-semibold tracking-[-0.03em] text-slate-900 transition-colors duration-300 group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-300 logo-font">
-              AlgoScope
-            </span>
+            <div className="min-w-0">
+              <p className="text-[1.3rem] font-semibold tracking-[-0.03em] text-slate-900 transition-colors duration-300 group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-300 logo-font">
+                AlgoScope
+              </p>
+              <p className="text-[11px] uppercase tracking-[0.36em] text-slate-500 transition-colors duration-300 dark:text-slate-400">
+                premium workspace
+              </p>
+            </div>
           </Link>
 
           {/* Desktop Search */}
           <div
             data-tour="search-bar"
-            className="hidden flex-1 justify-center md:flex md:max-w-sm lg:max-w-md xl:max-w-lg"
+            className="hidden flex-1 justify-center md:flex md:max-w-md lg:max-w-lg xl:max-w-xl"
           >
             <SearchBar onOpen={closeExploreMenu} />
           </div>
 
           <div className="hidden md:flex items-center gap-2 lg:gap-3">
             <ul
-              className="flex items-center gap-1 rounded-full border border-slate-200/80 bg-slate-50/80 p-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] dark:border-slate-800/80 dark:bg-slate-900/70"
+              className="flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-50/90 px-2 py-1.5 shadow-[0_10px_30px_rgba(15,23,42,0.08)] dark:border-slate-800/80 dark:bg-slate-900/70"
               onMouseLeave={() => setHoveredTab(null)}
             >
               {/* Explore Trigger */}
@@ -480,7 +485,7 @@ export const Navbar = () => {
                   <SignedOut>
                     <Link
                       to="/sign-in"
-                      className="theme-button-primary relative group overflow-hidden rounded-full border border-slate-200/80 bg-white/90 px-5 py-2 text-sm font-semibold text-slate-700 shadow-[0_8px_24px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(79,70,229,0.16)] active:scale-95 dark:border-slate-700/70 dark:bg-slate-900/70 dark:text-slate-200"
+                      className="group relative overflow-hidden rounded-full bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 px-5 py-2 text-sm font-semibold text-white shadow-[0_18px_60px_rgba(99,102,241,0.18)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_72px_rgba(99,102,241,0.24)] active:scale-[0.98]"
                     >
                       <span className="relative z-10">Sign In</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -501,7 +506,7 @@ export const Navbar = () => {
               ) : (
                 <Link
                   to="/sign-in"
-                  className="theme-button-primary relative group overflow-hidden rounded-full border border-slate-200/80 bg-white/90 px-5 py-2 text-sm font-semibold text-slate-700 shadow-[0_8px_24px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(79,70,229,0.16)] active:scale-95 dark:border-slate-700/70 dark:bg-slate-900/70 dark:text-slate-200"
+                  className="group relative overflow-hidden rounded-full bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 px-5 py-2 text-sm font-semibold text-white shadow-[0_18px_60px_rgba(99,102,241,0.18)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_72px_rgba(99,102,241,0.24)] active:scale-[0.98]"
                 >
                   <span className="relative z-10">Sign In</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
