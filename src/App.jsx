@@ -1,6 +1,11 @@
 import React, { lazy, Suspense } from 'react'
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
-import { SignIn, SignedIn, SignedOut, RedirectToSignIn } from '@clerk/clerk-react'
+import {
+  SignIn,
+  SignedIn,
+  SignedOut,
+  RedirectToSignIn,
+} from '@clerk/clerk-react'
 
 const ConceptsOverview = lazy(
   () => import('./components/concepts/ConceptsOverview')
@@ -162,7 +167,8 @@ const router = createBrowserRouter([
               Authentication not configured
             </h1>
             <p className="text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Please set `VITE_CLERK_PUBLISHABLE_KEY` in your environment to enable login and access the authentication flow.
+              Please set `VITE_CLERK_PUBLISHABLE_KEY` in your environment to
+              enable login and access the authentication flow.
             </p>
           </div>
         )}

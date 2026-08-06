@@ -285,7 +285,7 @@ export const Navbar = () => {
                 {isExploreMenuOpen && (
                   <motion.div
                     layoutId="nav-hover-pill"
-                      className="absolute inset-0 rounded-full border border-slate-300/30 bg-slate-200/70 dark:border-slate-800/50 dark:bg-slate-900/70 -z-0"
+                    className="absolute inset-0 rounded-full border border-slate-300/30 bg-slate-200/70 dark:border-slate-800/50 dark:bg-slate-900/70 -z-0"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -637,14 +637,14 @@ export const Navbar = () => {
                   <div className="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800/80 space-y-3">
                     {HAS_CLERK ? (
                       <SignedOut>
-                      <Link
-                        to="/sign-in"
-                        className="group relative flex w-full overflow-hidden rounded-2xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 active:scale-[0.98]"
-                      >
-                        <span className="relative z-10">Sign In</span>
-                        <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                      </Link>
-                    </SignedOut>
+                        <Link
+                          to="/sign-in"
+                          className="group relative flex w-full overflow-hidden rounded-2xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 active:scale-[0.98]"
+                        >
+                          <span className="relative z-10">Sign In</span>
+                          <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                        </Link>
+                      </SignedOut>
                     ) : (
                       <button
                         title="Auth not configured"
